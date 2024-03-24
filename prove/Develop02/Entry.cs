@@ -20,14 +20,15 @@ public class Entry
         Console.Write("> "); 
         _entryText = Console.ReadLine();
 
-        Console.WriteLine("Write today's date");
-        Console.Write("> ");
-        _date =  Console.ReadLine();
+        //Console.WriteLine("Write today's date");
+        //Console.Write("> ");
+        _date = DateTime.Now.ToString("MM/dd HH:mm:ss");
+        //_date =  Console.ReadLine();
     }
 
     public string DisplayText()
     {
-        return $"\nDate: {_date} - Prompt: {_promptText}\n-->: {_entryText}\n";   
+        return $"\nDate: {_date} - Prompt: {_promptText}\n-->: {_entryText}";   
     } 
 
 }

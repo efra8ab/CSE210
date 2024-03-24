@@ -31,7 +31,7 @@ public class Journal
         {
             foreach(Entry entry in _entries)
             {
-                string entryText = $"Date: {entry._date} - Prompt: {entry._promptText}\nEntry: {entry._entryText}\n---\n";
+                string entryText = $"{entry._date}-{entry._promptText}-{entry._entryText}";
                 outputFile.WriteLine(entryText);
             }
 
@@ -45,16 +45,18 @@ public class Journal
         string fileName = Console.ReadLine();
         string[] lines = System.IO.File.ReadAllLines(fileName);
 
+        _entries.Clear();
+
         foreach(string line in lines)
         {
-            string[] parts = line.Split(",");
+            string[] parts = line.Split("-");
 
             if(parts.Length == 3)
             {
                 Entry entry = new Entry();
-                entry._date = parts[0].Replace("Date: ", "").Trim();
-                entry._promptText = parts[1].Replace("Prompt: ", "").Trim();
-                entry._entryText = parts[2].Replace("Entry: ", "").Trim();
+                entry._date = parts[0].Trim();
+                entry._promptText = parts[1].Trim();
+                entry._entryText = parts[2].Trim();
 
                 _entries.Add(entry);
             }

@@ -28,30 +28,51 @@ class Program
                 Entry entry = new Entry();
                 entry.NewEntry();
                 journal.AddEntry(entry);
+                Console.Write("Hit enter to continue...");
+                Console.ReadLine();
+                Console.Clear();
             }
 
             //option 2 - view entries
             else if(intSelection == 2)
             {
                 journal.DisplayAll();
+                Console.Write("\nHit enter to continue...");
+                Console.ReadLine();
+                Console.Clear();
             }
 
             //Option 3 - load file
             else if (intSelection == 3)
             {
                 journal.LoadFile();
+                Console.Write("Hit enter to continue...");
+                Console.ReadLine();
+                Console.Clear();
             }
             
             //Option 4 - save file
             else if (intSelection == 4)
             {
                 journal.SaveFile();
+                Console.Write("Hit enter to continue...");
+                Console.ReadLine();
+                Console.Clear();
+            }
+
+            else if (intSelection == 5)
+            {
+                break;
             }
 
             //if option is not available
             else
             {
                 Console.WriteLine("Please enter a valid option!");
+                Console.Write("Hit enter to continue...");
+                Console.ReadLine();
+                Console.Clear();
+
             }
 
         }while(intSelection != 5);
