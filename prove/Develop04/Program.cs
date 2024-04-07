@@ -5,7 +5,9 @@ class Program
     static void Main(string[] args)
     {
         while (true)
-        {
+        {   
+            Console.Clear();
+            Console.WriteLine("Welcome to the Mindfulness app!!");
             Console.WriteLine("Select an activity:");
             Console.WriteLine("1. Breathing Activity");
             Console.WriteLine("2. Listing Activity");
