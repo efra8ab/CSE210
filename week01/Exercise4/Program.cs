@@ -37,11 +37,11 @@ class Program
         //Average
         double avg = (double)sum / numbers.Count;
 
-        //Smallest
+        //Smallest, positive number
         int min = numbers[0];
         foreach (int number in numbers)
         {
-            if (number < min) {min = number;}
+            if (number < min && number > 0) {min = number;}
         }
 
         //Biggest
@@ -54,7 +54,14 @@ class Program
         Console.WriteLine($"The sum is: {sum}");
         Console.WriteLine($"The average is: {avg}");
         Console.WriteLine($"The largest number is: {max}");
-        Console.WriteLine($"The smallest number is: {min}");
+        Console.WriteLine($"The smallest positive number is: {min}");
+        
+        numbers.Sort();
+        Console.WriteLine("The sorted list is: ");
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
         
     }
 }
