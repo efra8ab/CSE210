@@ -4,31 +4,39 @@ class Program
 {
     static void Main(string[] args)
     {
-
+        Console.Clear();
         Console.Write("Write down your grade percentage: ");
         string strGrade = Console.ReadLine();
         int grade = int.Parse(strGrade);
 
         string letterGrade = "";
+        string sign = "";
+
+        int lastDigit = grade % 10;
+
+        if (lastDigit >= 7 && grade < 97)
+        {sign = "+";}
+        else if (lastDigit < 3)
+        {sign = "-";}
 
         if (grade >= 90) // A
         {
-            letterGrade = "A";
+            letterGrade = "A" + sign;
         } 
 
         else if (grade >= 80) // B
         {
-            letterGrade = "B";
+            letterGrade = "B" + sign;
         }
 
         else if (grade >= 70) // C
         {
-            letterGrade = "C";
+            letterGrade = "C" + sign;
         }
 
         else if (grade >= 60) // D
         {
-            letterGrade = "D";
+            letterGrade = "D" + sign;
         }
 
         else if (grade < 60) // F
