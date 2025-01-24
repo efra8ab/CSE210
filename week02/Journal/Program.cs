@@ -38,12 +38,12 @@ class Program
                     break;
 
                 case "3":
-                    Console.WriteLine("This is option 3");
+                    journal.SaveEntries();
                     Console.ReadLine();
                     break;
 
                 case "4":
-                    Console.WriteLine("This is option 4");
+                    journal.LoadEntries();
                     Console.ReadLine();
                     break;
 
