@@ -7,6 +7,7 @@ class Program
         Console.Clear();
         
         bool exit = true;
+        var journal = new Journal();
 
         while (exit)
         {
@@ -19,16 +20,20 @@ class Program
             Console.WriteLine("5. Exit");
             Console.Write("Please choose an option: ");
             string option = Console.ReadLine();
+
+            PromptGenerator randomPrompt = new PromptGenerator();
             
             switch (option)
             {
                 case "1":
-                    Console.WriteLine("This is option 1");
+                    Console.Clear();
+                    journal.AddEntry(randomPrompt);
                     Console.ReadLine();
                     break;
 
                 case "2":
-                    Console.WriteLine("This is option 2");
+                    Console.Clear();
+                    journal.ViewEntries();
                     Console.ReadLine();
                     break;
 
