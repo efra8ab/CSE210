@@ -1,5 +1,9 @@
 using System;
 
+//exceeding requirements
+//added an option to create .txt or .csv files and load these two 
+//handled errors for incorrect selection or file type
+
 class Program
 {
     static void Main(string[] args)
