@@ -87,7 +87,7 @@ public class Journal
 
         string[] lines = File.ReadAllLines(fileName);
 
-        if (fileName.EndsWith(".csv"))
+        if (fileName.EndsWith(".csv")) //exceeding requirements - option to load and save csv files
         {
             for (int i = 1; i < lines.Length; i++)
             {
