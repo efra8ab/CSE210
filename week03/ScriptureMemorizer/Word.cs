@@ -28,9 +28,12 @@ public class Word
 
     public string GetDisplayText()
     {
+        int letterCount = _text.Count(char.IsLetter);
+
         if (_isHidden)
         {
-            return "___";
+            string lines = new string('_', letterCount);
+            return lines;
         }
 
         return _text;
