@@ -1,6 +1,10 @@
 using System;
 using System.Diagnostics;
 
+//Exceding requirements
+//I have added an option to memorize another scripture as well as randomize the scripture to memorize
+//Option to select the number of words to hide.
+
 class Program
 {
     static void Main(string[] args)
@@ -8,8 +12,9 @@ class Program
         List<(Reference, string)> scriptures = new List<(Reference, string)>
         {
             (new Reference("Moses", 1, 39),"For behold, this is my work and my glory to bring to pass the immortality and eternal life of man."),
-            (new Reference("Isaiah", 55, 8, 9), "For my thoughts are not your thoughts, neither are your ways my ways, saith the Lord. \nFor as the heavens are higher than the earth, so are my ways higher than your ways, and my thoughts than your thoughts."),
-            (new Reference("Mosiah", 2, 17), "And behold, I tell you these things that ye may learn wisdom; that ye may learn that when ye are in the service of your fellow beings ye are only in the service of your God.")
+            (new Reference("Isaiah", 55, 8, 9), "For my thoughts are not your thoughts, neither are your ways my ways, saith the Lord. \n\nFor as the heavens are higher than the earth, so are my ways higher than your ways, and my thoughts than your thoughts."),
+            (new Reference("Mosiah", 2, 17), "And behold, I tell you these things that ye may learn wisdom; that ye may learn that when ye are in the service of your fellow beings ye are only in the service of your God."),
+            (new Reference("Moroni", 10, 4, 5), "And when ye shall receive these things, I would exhort you that ye would ask God, the Eternal Father, in the name of Christ, if these things are not true; and if ye shall ask with a sincere heart, with real intent, having faith in Christ, he will manifest the truth of it unto you, by the power of the Holy Ghost.\n\nAnd by the power of the Holy Ghost ye may know the truth of all things.")
         };
 
         Random rand = new Random();
