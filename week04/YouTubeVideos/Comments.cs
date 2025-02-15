@@ -1,10 +1,11 @@
 public class Comments
 {
-    private string _commentAuthor;
-    private string _text;
+    public string _commentAuthor;
+    public string _text;
 
-    public Comments()
+    public Comments(string commentAuthor, string text)
     {
-        
+        _commentAuthor = commentAuthor;
+        _text = text;
     }
 }
