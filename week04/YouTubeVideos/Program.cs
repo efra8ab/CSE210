@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        List<Video> videos = new List<Video>();
+
         Video video1 = new Video("How to build a PC gamer","Techsav43",400);
         Video video2 = new Video("Top 10 places you cannot miss in Rome","TravelRom3",1200);
         Video video3 = new Video("Upcoming 2025 movies I want to see", "TheMovieFiles", 1342);
@@ -29,14 +31,15 @@ class Program
         video4._comments.Add(new Comments("404BrainNotFound","C# classes are easy? That’s the funniest joke in this video"));
         video4._comments.Add(new Comments("SpicyKeyboardWarrior","Finally, a class I don’t have to attend at 8 AM."));
 
-        Console.WriteLine();
-        video1.DisplayVideo();
-        Console.WriteLine();
-        video2.DisplayVideo();
-        Console.WriteLine();
-        video3.DisplayVideo();
-        Console.WriteLine();
-        video4.DisplayVideo();
+        videos.Add(video1);
+        videos.Add(video2);
+        videos.Add(video3);
+        videos.Add(video4);
+
+        foreach (Video video in videos)
+        {
+            video.DisplayVideo();
+        }
 
 
     }
