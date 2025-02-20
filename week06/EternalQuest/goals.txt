@@ -1,0 +1,5 @@
+340
+SimpleGoal|pan|ir por pan|20|True
+SimpleGoal|agua|comprar agua|10|False
+EternalGoal|templo|ir al templo|40
+ChecklistGoal|ejercicio|toda la semana|20|7|100|7

@@ -1,0 +1,2 @@
+100
+SimpleGoal|bread|buy bread|100|True
