@@ -3,7 +3,7 @@ public class Activity
     protected string _name;
     protected string _description;
     protected int _duration;
-    public Activity(string name, string description, int duration)
+    public Activity(string name, string description)
     {
         _name = name;
         _description = description;
@@ -25,10 +25,10 @@ public class Activity
     public void DisplayEndingMessage()
     {
         Console.WriteLine("\nWell done!");
-        ShowSpinner(2);
+        ShowSpinner(5);
 
-        Console.WriteLine($"You have completed another {_duration} secods of the {_name}");
-        ShowSpinner(3);
+        Console.WriteLine($"You have completed another {_duration} seconds of the {_name}");
+        ShowSpinner(7);
     }
 
     public void ShowSpinner(int seconds)
@@ -36,19 +36,16 @@ public class Activity
         DateTime endTime = DateTime.Now.AddSeconds(seconds);
         int spinnerCounter = 0;
 
+        string[] spinnerFrames = {"/", "-", "\\", "|",};
+
         while (DateTime.Now < endTime)
         {
+            Console.Write($"\r{spinnerFrames[spinnerCounter % 4]}");
             spinnerCounter++;
-            switch (spinnerCounter % 4)
-            {
-                case 0: Console.Write("/"); break;
-                case 1: Console.Write("-"); break;
-                case 2: Console.Write("\\"); break;
-                case 4: Console.Write("|"); break;
-            }
+            Thread.Sleep(100);
         }
 
-        Console.Write("");
+        Console.Write("\r");
         Console.WriteLine();
     }
 
@@ -56,7 +53,7 @@ public class Activity
     {
         for (int i = seconds; i > 0; i--)
         {
-            Console.Write(i);
+            Console.Write($"\r{i}");
             Thread.Sleep(1000);
         }
 
