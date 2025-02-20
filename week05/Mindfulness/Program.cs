@@ -20,9 +20,12 @@ class Program
             {
                 case "1":
                     BreathingActivity breathing = new BreathingActivity();
-                    breathing.run();
+                    breathing.Run();
                     break;
                 case "2":
+                    ReflectingActivity reflecting = new ReflectingActivity();
+                    reflecting.Run();
+                    break;
                 case "3":
                 case "4":
                     return;

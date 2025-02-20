@@ -12,13 +12,14 @@ public class Activity
     public void DisplayStartingMessage()
     {
         Console.Clear();
-        Console.WriteLine($"Welcome to the mindfulness program!\n");
+        Console.WriteLine($"---Welcome to the {_name}!");
+        Console.WriteLine(_description);
 
-        Console.WriteLine("How long, in seconds, would you like for your activity?");
+        Console.WriteLine("\nHow long, in seconds, would you like for your activity?");
         string strUserDuration = Console.ReadLine();
         _duration = int.Parse(strUserDuration);
 
-        Console.WriteLine("Loading...");
+        Console.WriteLine("\nLoading...");
         ShowSpinner(3);
     }
 
