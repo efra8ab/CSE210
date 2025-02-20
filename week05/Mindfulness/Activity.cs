@@ -7,6 +7,7 @@ public class Activity
     {
         _name = name;
         _description = description;
+        _duration = 30;
     }
 
     public void DisplayStartingMessage()

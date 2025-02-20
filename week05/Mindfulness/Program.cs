@@ -27,6 +27,9 @@ class Program
                     reflecting.Run();
                     break;
                 case "3":
+                    ListingActivity listing = new ListingActivity();
+                    listing.Run();
+                    break;
                 case "4":
                     return;
                 default:
